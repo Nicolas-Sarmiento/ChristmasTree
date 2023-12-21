@@ -37,7 +37,7 @@ char** initTree( size_t height, size_t width){
 
     for ( int row = 0; row < height; row++ ){
         for ( int col = 0; col < width; col++ ){
-            matrix[row][col] = col+1 != width ? '.':'\0';
+            matrix[row][col] = col+1 != width ? ' ':'\0';
 
         }
     }
