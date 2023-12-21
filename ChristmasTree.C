@@ -37,7 +37,7 @@ char** initTree( size_t height, size_t width){
 
     for ( int row = 0; row < height; row++ ){
         for ( int col = 0; col < width; col++ ){
-            matrix[row][col] = col+1 != width ? ' ':'\0';
+            matrix[row][col] = col+1 != width ? '.':'\0';
 
         }
     }
@@ -55,17 +55,17 @@ void printTree( char** tree, size_t height, size_t width ){
     }
 
     printf("\033[0;34m");
-    for (size_t i = 0; i < width; i++){
+    for (size_t i = 0; i < width-1; i++){
         printf("=");
     }
     printf("\n");
-    int pad = (width - strlen(message))/2;
+    int pad = ((width-1) - strlen(message))/2;
     printf("|");
     printf("\033[0;35m");
     printf("%*.*s%s", pad-1, pad-1, " ", message);
     printf("\033[0;34m");
-    printf("%*.*s%s\n", pad, pad, " ", "|");
-    for (size_t i = 0; i < width; i++){
+    printf("%*.*s%s\n", pad-1, pad-1, "", "|");
+    for (size_t i = 0; i < width-1; i++){
         printf("=");
     }
      printf("\n");
