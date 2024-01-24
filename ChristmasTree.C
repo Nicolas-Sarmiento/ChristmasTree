@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <time.h>
-
+   
 void christmasTree();
 char** initTree( size_t , size_t);
 void printTree( char**, size_t, size_t);
